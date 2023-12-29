@@ -52,7 +52,8 @@ fun FichaScreen(viewModel: FichaViewModel, navController: NavHostController) {
                     DetFicha(fotoEmail, titulo = "Email", dato = usuario.email)
                     Spacer(modifier=Modifier.height(10.dp))
 
-                    val fotoGenero = painterResource(id = R.drawable.gender)
+                    var fotoGenero = painterResource(id = R.drawable.gender)
+                    if (usuario.gender!="female") fotoGenero = painterResource(id = R.drawable.man)
                     DetFicha(fotoGenero, titulo = "Genero", dato = usuario.gender)
                     Spacer(modifier=Modifier.height(10.dp))
 
