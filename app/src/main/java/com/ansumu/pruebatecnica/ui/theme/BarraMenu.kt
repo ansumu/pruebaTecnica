@@ -1,5 +1,6 @@
 package com.ansumu.pruebatecnica.ui.theme
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -34,9 +35,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.ansumu.pruebatecnica.R
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
-fun BarraMenu(navController: NavController) {
+fun BarraMenu(navController: NavController, mostrar: Boolean) {
     val context = LocalContext.current
+    if (mostrar)
     Box(modifier = Modifier
         .fillMaxWidth()
         .padding(horizontal = 1.dp)
