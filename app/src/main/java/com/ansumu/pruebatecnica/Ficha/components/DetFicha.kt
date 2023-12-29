@@ -37,6 +37,7 @@ fun DetFicha(imagePainter: Painter, titulo: String, dato: String) {
                 .height(32.dp),
             contentScale = ContentScale.Fit
         )
+        Spacer(modifier=Modifier.width(20.dp))
         Column(modifier=Modifier.padding(end=20.dp)) {
             Text(
                 text = titulo,
