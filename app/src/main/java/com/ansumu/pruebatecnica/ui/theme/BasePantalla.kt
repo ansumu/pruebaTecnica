@@ -19,6 +19,7 @@ import androidx.navigation.NavController
 @Composable
 fun BasePantalla(
     navController: NavController,
+    mostrar: Boolean,
     content: @Composable () -> Unit = {}
 ) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
@@ -27,7 +28,7 @@ fun BasePantalla(
             .fillMaxSize()
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         bottomBar = {
-            BarraMenu(navController) }
+            BarraMenu(navController,mostrar) }
     ) {
         Box(
             modifier = Modifier.fillMaxSize().background(Color.White),
