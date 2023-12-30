@@ -14,6 +14,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import com.ansumu.pruebatecnica.Listado.components.CabList
 import com.ansumu.pruebatecnica.Listado.components.UserItem
+import com.ansumu.pruebatecnica.Model.config
 import com.ansumu.pruebatecnica.ui.theme.BasePantalla
 
 @Composable
@@ -22,10 +23,13 @@ fun ListScreen(viewModel: ListViewModel, navController: NavHostController) {
     val listadoUsuarios by viewModel.listUsuarios.observeAsState(initial = emptyList())
 
     LaunchedEffect(Unit) {
-        viewModel.cargarListadoUsuarios()
+        if (!config.lecturaServidor) {
+            viewModel.cargarListadoUsuarios()
+            config.lecturaServidor=true
+        }
     }
 
-    BasePantalla(navController = navController, mostrar = false) {
+    BasePantalla(navController = navController, mostrar = false, false) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()

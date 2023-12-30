@@ -33,6 +33,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.ansumu.pruebatecnica.Model.config
 import com.ansumu.pruebatecnica.R
 
 @SuppressLint("SuspiciousIndentation")
@@ -102,6 +103,7 @@ fun MenuOpcion(
             contexto.finishAffinity()
         }
     } else {
+        config.lecturaServidor=false
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,

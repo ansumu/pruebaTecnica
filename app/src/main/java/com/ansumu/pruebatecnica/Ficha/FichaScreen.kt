@@ -30,7 +30,7 @@ fun FichaScreen(viewModel: FichaViewModel, navController: NavHostController) {
 
     }
 
-    BasePantalla(navController = navController, mostrar = false) {
+    BasePantalla(navController = navController, mostrar = false,true) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()

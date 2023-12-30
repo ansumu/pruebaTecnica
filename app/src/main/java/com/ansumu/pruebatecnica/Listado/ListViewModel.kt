@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ansumu.pruebatecnica.Model.User
+import com.ansumu.pruebatecnica.Model.config
 import com.ansumu.pruebatecnica.Network.RetrofitClient
 import com.ansumu.pruebatecnica.Network.WebServiceApi
 import kotlinx.coroutines.Dispatchers
@@ -24,7 +25,7 @@ class ListViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val service = RetrofitClient.createService(WebServiceApi::class.java)
-                val result = service.getListado()
+                val result = service.getListado(config.numRegistros)
 
                 withContext(Dispatchers.Main) {
                     if (result.isSuccessful) {
