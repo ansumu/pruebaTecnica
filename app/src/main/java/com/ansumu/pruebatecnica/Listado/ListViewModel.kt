@@ -1,6 +1,8 @@
 package com.ansumu.pruebatecnica
 
 import android.util.Log
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,6 +22,22 @@ class ListViewModel : ViewModel() {
     private var _listUsuarios = MutableLiveData<List<User>>()
     val listUsuarios: LiveData<List<User>> get() = _listUsuarios
 
+    private val _searchQuery = mutableStateOf("")
+    val searchQuery: MutableState<String> = _searchQuery
+
+    private val _allUsers = MutableLiveData<List<User>>()
+
+    fun filterList() {
+        val query = searchQuery.value
+        _listUsuarios.value = if (query.isBlank()) {
+            _allUsers.value
+        } else {
+            _allUsers.value?.filter {
+                it.name.first.contains(query, ignoreCase = true) || it.name.last.contains(query, ignoreCase = true) || it.email.contains(query, ignoreCase = true)
+            }
+        }
+    }
+
     fun cargarListadoUsuarios() {
         _isLoading.value = true
         viewModelScope.launch(Dispatchers.IO) {
@@ -29,8 +47,11 @@ class ListViewModel : ViewModel() {
 
                 withContext(Dispatchers.Main) {
                     if (result.isSuccessful) {
-                        _listUsuarios.value = result.body()?.results
-                        println(_listUsuarios.value)
+                        val usuariosDuplicados = result.body()?.results
+                        val uniqueUsers =usuariosDuplicados?.distinctBy { Pair(it.name, it.email) }
+                        _listUsuarios.value = uniqueUsers ?: emptyList()
+                        _allUsers.value = uniqueUsers ?: emptyList()
+
                         val responseData = result.body()
                         Log.d("WebServiceApi", "Response: $responseData")
                     } else {

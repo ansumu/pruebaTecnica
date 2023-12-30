@@ -19,6 +19,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -45,6 +47,7 @@ fun DetFicha(imagePainter: Painter, titulo: String, dato: String) {
                 style = TextStyle(
                     fontSize = 11.sp,
                     lineHeight = 14.sp,
+                    fontFamily = FontFamily(Font(R.font.open_sans)),
                     fontWeight = FontWeight(400),
                     color = Color(0xFF707070),
                 ),
@@ -57,8 +60,9 @@ fun DetFicha(imagePainter: Painter, titulo: String, dato: String) {
             Text(
                 text = dato,
                 style = TextStyle(
-                    fontSize = 16.sp,
+                    fontSize = 14.sp,
                     lineHeight = 18.sp,
+                    fontFamily = FontFamily(Font(R.font.open_sans)),
                     fontWeight = FontWeight(600),
                     color = Color(0xFF000000),
                 ),
