@@ -11,8 +11,6 @@ object RetrofitClient {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val webService: WebServiceApi = retrofit.create(WebServiceApi::class.java)
-
     fun <T> createService(serviceClass: Class<T>): T {
         return retrofit.create(serviceClass)
     }

@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TopAppBarDefaults
@@ -20,21 +22,36 @@ import androidx.navigation.NavController
 fun BasePantalla(
     navController: NavController,
     mostrar: Boolean,
+    extendIntoStatusBar: Boolean = false,
     content: @Composable () -> Unit = {}
 ) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
-    Scaffold(
-        modifier = Modifier
+
+    val modifier = if (extendIntoStatusBar) {
+        Modifier.fillMaxSize()
+    } else {
+        Modifier
             .fillMaxSize()
+            .systemBarsPadding()
+    }
+
+    Scaffold(
+        modifier = modifier
             .nestedScroll(scrollBehavior.nestedScrollConnection),
         bottomBar = {
-            BarraMenu(navController,mostrar) }
+            if (mostrar) {
+                BarraMenu(navController, mostrar)
+            }
+        }
     ) {
         Box(
-            modifier = Modifier.fillMaxSize().background(Color.White),
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White),
             contentAlignment = Alignment.Center
         ) {
             content()
         }
     }
 }
+

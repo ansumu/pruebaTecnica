@@ -32,19 +32,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.ansumu.pruebatecnica.ui.theme.BarraMenu
+import com.ansumu.pruebatecnica.ui.theme.BasePantalla
 
 @SuppressLint("UnrememberedMutableState", "UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun HomePantalla(navController: NavHostController) {
-
-    var codigoText by remember { mutableStateOf("") }
-    val context = LocalContext.current
-
-    Scaffold(
-        modifier = Modifier
-            .fillMaxSize(),
-        bottomBar = { BarraMenu(navController, true) },
-    ) {
+    BasePantalla(navController = navController,true, false){
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -60,9 +53,9 @@ fun HomePantalla(navController: NavHostController) {
                         contentDescription = "image description",
                         contentScale = ContentScale.Fit,
                                 modifier = Modifier
-                                .padding(1.dp)
-                            .width(33.dp)
-                            .height(67.dp)
+                                    .padding(1.dp)
+                                    .width(33.dp)
+                                    .height(67.dp)
                     )
                     Image(
                         painter = painterResource(id = R.drawable.stradivarius),
