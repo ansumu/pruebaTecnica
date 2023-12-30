@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
@@ -38,7 +39,7 @@ fun DetFicha(imagePainter: Painter, titulo: String, dato: String) {
             contentScale = ContentScale.Fit
         )
         Spacer(modifier=Modifier.width(20.dp))
-        Column(modifier=Modifier.padding(end=20.dp)) {
+        Column(modifier=Modifier.padding(end=20.dp).align(Alignment.Top) ) {
             Text(
                 text = titulo,
                 style = TextStyle(
@@ -46,17 +47,24 @@ fun DetFicha(imagePainter: Painter, titulo: String, dato: String) {
                     lineHeight = 14.sp,
                     fontWeight = FontWeight(400),
                     color = Color(0xFF707070),
-                )
+                ),
+                modifier = Modifier
+                    .width(282.dp)
+                    .height(14.dp)
             )
+
             Spacer(modifier=Modifier.height(5.dp))
             Text(
                 text = dato,
                 style = TextStyle(
-                    fontSize = 14.sp,
-                    lineHeight = 16.sp,
+                    fontSize = 16.sp,
+                    lineHeight = 18.sp,
                     fontWeight = FontWeight(600),
                     color = Color(0xFF000000),
-                )
+                ),
+                modifier = Modifier
+                    .width(282.dp)
+                    .height(18.dp)
             )
             Spacer(modifier=Modifier.height(10.dp))
             Image(

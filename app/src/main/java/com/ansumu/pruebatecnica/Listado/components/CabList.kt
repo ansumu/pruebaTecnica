@@ -32,7 +32,7 @@ fun CabList(navController: NavHostController) {
             painter = painterResource(id = R.drawable.izquierda),
             contentDescription = "image description",
             modifier = Modifier
-                .size(32.dp)
+                .size(26.dp)
                 .clickable { navController.popBackStack() },
             contentScale = ContentScale.Fit
         )
