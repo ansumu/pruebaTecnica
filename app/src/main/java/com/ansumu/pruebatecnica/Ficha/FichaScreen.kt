@@ -11,12 +11,15 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.zIndex
 import com.ansumu.pruebatecnica.Ficha.components.CabFicha
+import com.ansumu.pruebatecnica.Ficha.components.CabFichaMenu
 import com.ansumu.pruebatecnica.Ficha.components.DetFicha
 import com.ansumu.pruebatecnica.Ficha.components.PieFicha
 import com.ansumu.pruebatecnica.Model.usuario
 import com.ansumu.pruebatecnica.R
 import com.ansumu.pruebatecnica.ui.theme.BasePantalla
+import java.util.Locale
 
 @Composable
 fun FichaScreen(viewModel: FichaViewModel, navController: NavHostController) {
@@ -36,33 +39,35 @@ fun FichaScreen(viewModel: FichaViewModel, navController: NavHostController) {
                 .fillMaxWidth()
                 .fillMaxHeight()
         ) {
-            CabFicha(navController = navController, usuario.foto)
+            val titulo=nombre.toUpperCase(Locale.ROOT)
+            CabFicha(navController = navController, usuario.foto, titulo)
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f)
+                    .offset(y=-10.dp)
                     .verticalScroll(rememberScrollState())
             ) {
                 Column(modifier=Modifier.padding(start=30.dp)) {
                     val fotoUser = painterResource(id = R.drawable.user)
-                    DetFicha(fotoUser,"Nombre y apellidos", usuario.name)
+                    DetFicha(fotoUser,"Nombre y apellidos", nombre)
                     Spacer(modifier=Modifier.height(10.dp))
 
                     val fotoEmail = painterResource(id = R.drawable.email)
-                    DetFicha(fotoEmail, titulo = "Email", dato = usuario.email)
+                    DetFicha(fotoEmail, titulo = "Email", dato = email)
                     Spacer(modifier=Modifier.height(10.dp))
 
                     var fotoGenero = painterResource(id = R.drawable.gender)
                     if (usuario.gender!="female") fotoGenero = painterResource(id = R.drawable.man)
-                    DetFicha(fotoGenero, titulo = "Genero", dato = usuario.gender)
+                    DetFicha(fotoGenero, titulo = "Genero", dato = genero)
                     Spacer(modifier=Modifier.height(10.dp))
 
                     val fotoFecha = painterResource(id = R.drawable.calendar)
-                    DetFicha(fotoFecha, titulo = "Fecha de registro", dato = usuario.fecha)
+                    DetFicha(fotoFecha, titulo = "Fecha de registro", dato = fecha)
                     Spacer(modifier=Modifier.height(10.dp))
 
                     val fotoTelefono = painterResource(id = R.drawable.phone)
-                    DetFicha(fotoTelefono,titulo = "Teléfono", dato = usuario.phone)
+                    DetFicha(fotoTelefono,titulo = "Teléfono", dato = telefono)
                     Spacer(modifier=Modifier.height(10.dp))
 
                     PieFicha()
