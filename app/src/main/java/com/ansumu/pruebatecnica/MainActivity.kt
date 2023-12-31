@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         usuario= datosUsuario("","","","","","")
-        config=publico(false,20)
+        config=publico(false,50)
         setContent {
             PruebaTecnicaTheme {
                 // A surface container using the 'background' color from the theme
@@ -37,10 +37,10 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = Pantallas.PantallaHome.ruta) {
-                        composable(Pantallas.PantallaHome.ruta) {
+                    NavHost(navController = navController, startDestination = Pantallas.HomeScreen.ruta) {
+                        composable(Pantallas.HomeScreen.ruta) {
                             SystemUiController(backgroundColor = Color.White, isTextDark = true)
-                            HomePantalla(navController = navController)
+                            HomeScreen(navController = navController)
                         }
                         composable(Pantallas.ListScreen.ruta) {
                             SystemUiController(backgroundColor = Color.White, isTextDark = true)

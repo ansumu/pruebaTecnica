@@ -66,7 +66,7 @@ fun BarraMenu(navController: NavController, mostrar: Boolean) {
                 MenuOpcion(
                     imagen = R.drawable.home,
                     texto = "Inicio",
-                    ruta = Pantallas.PantallaHome.ruta,
+                    ruta = Pantallas.HomeScreen.ruta,
                     navController = navController,
                     modifier = Modifier.weight(1f)
                 )
