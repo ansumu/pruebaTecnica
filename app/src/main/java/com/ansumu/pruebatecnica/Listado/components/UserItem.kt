@@ -75,7 +75,7 @@ fun UserItem(user: User, navController: NavHostController) {
                     color = Color(0xFF8E8E93)
                 ),
                 modifier = Modifier
-                    .width(240.dp)
+                    .width(180.dp)
                     .height(17.dp)
             )
 
