@@ -2,21 +2,21 @@ Comentarios de la Prueba Técnica:
 
 Dificultades Encaradas:
 
-Uno de los retos encontrados fue la obtención de las fuentes tipográficas adecuadas directamente desde Figma, lo cual, hasta donde sé, no es posible.
-Aunque identifiqué un par de fuentes similares, las variantes específicas pueden ser esquivas.
-Con las fuentes correctas, el diseño sería aún más fiel al concepto original.
+    Uno de los retos encontrados fue la obtención de las fuentes tipográficas adecuadas directamente desde Figma, lo cual, hasta donde sé, no es posible.
+    Aunque identifiqué un par de fuentes similares, las variantes específicas pueden ser esquivas.
+    Con las fuentes correctas, el diseño sería aún más fiel al concepto original.
 
-Durante el desarrollo de la prueba técnica, me encontré con un problema específico al ejecutar la aplicación en dispositivos con Android 7. 
-El inconveniente estaba relacionado con las fuentes personalizadas utilizadas en la aplicación, las cuales no eran completamente compatibles
-con esta versión del sistema operativo.
-
-Tras intentar varias soluciones y evaluar las opciones disponibles, decidí enfocar el desarrollo y las pruebas de la aplicación para sistemas 
-operativos Android 8 en adelante. Esta decisión se tomó para asegurar una experiencia de usuario totalmente estable y coherente, dado que la 
-corrección de estos problemas en Android 7 requeriría un tiempo y recursos que excedían el alcance de esta prueba técnica.
-
-Esta decisión también se alinea con las estadísticas de uso actuales, donde la mayoría de los usuarios se encuentran en versiones más recientes
-de Android. Sin embargo, soy consciente de la importancia de la compatibilidad con versiones anteriores y estaría dispuesto a explorar soluciones
-alternativas en un contexto de proyecto a mayor escala.
+    Durante el desarrollo de la prueba técnica, me encontré con un problema específico al ejecutar la aplicación en dispositivos con Android 7. 
+    El inconveniente estaba relacionado con las fuentes personalizadas utilizadas en la aplicación, las cuales no eran completamente compatibles
+    con esta versión del sistema operativo.
+    
+    Tras intentar varias soluciones y evaluar las opciones disponibles, decidí enfocar el desarrollo y las pruebas de la aplicación para sistemas 
+    operativos Android 8 en adelante. Esta decisión se tomó para asegurar una experiencia de usuario totalmente estable y coherente, dado que la 
+    corrección de estos problemas en Android 7 requeriría un tiempo y recursos que excedían el alcance de esta prueba técnica.
+    
+    Esta decisión también se alinea con las estadísticas de uso actuales, donde la mayoría de los usuarios se encuentran en versiones más recientes
+    de Android. Sin embargo, soy consciente de la importancia de la compatibilidad con versiones anteriores y estaría dispuesto a explorar soluciones
+    alternativas en un contexto de proyecto a mayor escala.
 
 Aspectos Destacados:
 
@@ -53,9 +53,10 @@ Detalles de Interfaz y Navegación:
 
 Entregables:
 
-Incluiré capturas de pantalla en PDF de los dos emuladores mencionados previamente en el correo electrónico de seguimiento.
+    Incluiré capturas de pantalla en PDF de los dos emuladores mencionados previamente en el correo electrónico de seguimiento.
+    Y un enlace de descarga apk a un servidor privado que tengo en la nube.
 
-Para concluir, quiero destacar mi compromiso con la transparencia y la honestidad en el proceso de desarrollo. Como habrán notado, no he ocultado 
+    Para concluir, quiero destacar mi compromiso con la transparencia y la honestidad en el proceso de desarrollo. Como habrán notado, no he ocultado 
 los desafíos encontrados, sea para bien o para mal. Creo firmemente que reconocer y comunicar abiertamente los problemas es crucial para el crecimiento
 profesional y la mejora continua. Espero que esta prueba refleje no solo mis habilidades técnicas, sino también mi enfoque hacia un desarrollo 
 de software responsable y abierto.
