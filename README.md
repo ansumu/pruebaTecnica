@@ -1,6 +1,6 @@
 Comentarios de la Prueba Técnica:
 
-Dificultades Encaradas:
+Dificultades Encontradas:
 
     Uno de los retos encontrados fue la obtención de las fuentes tipográficas adecuadas directamente desde Figma, lo cual, hasta donde sé, no es posible.
     Aunque identifiqué un par de fuentes similares, las variantes específicas pueden ser esquivas.
