@@ -1,6 +1,6 @@
 Comentarios de la Prueba Técnica:
 
-Dificultades Encontradas:
+Dificultades Encaradas:
 
     Uno de los retos encontrados fue la obtención de las fuentes tipográficas adecuadas directamente desde Figma, lo cual, hasta donde sé, no es posible.
     Aunque identifiqué un par de fuentes similares, las variantes específicas pueden ser esquivas.
@@ -55,6 +55,8 @@ Entregables:
 
     Incluiré capturas de pantalla en PDF de los dos emuladores mencionados previamente en el correo electrónico de seguimiento.
     Y un enlace de descarga apk a un servidor privado que tengo en la nube.
-    
-Para concluir, quiero destacar mi compromiso con la transparencia y la honestidad en el proceso de desarrollo. Como habrán notado, no he ocultado desafíos encontrados, sea para bien o para mal. Creo firmemente que reconocer y comunicar abiertamente los problemas es crucial para el crecimiento profesional y la mejora continua. Espero que esta prueba refleje no solo mis habilidades técnicas, sino también mi enfoque hacia un desarrollo 
+
+    Para concluir, quiero destacar mi compromiso con la transparencia y la honestidad en el proceso de desarrollo. Como habrán notado, no he ocultado 
+los desafíos encontrados, sea para bien o para mal. Creo firmemente que reconocer y comunicar abiertamente los problemas es crucial para el crecimiento
+profesional y la mejora continua. Espero que esta prueba refleje no solo mis habilidades técnicas, sino también mi enfoque hacia un desarrollo 
 de software responsable y abierto.
